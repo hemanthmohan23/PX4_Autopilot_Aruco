@@ -103,3 +103,22 @@ with System() as drone:
 print("Spiral trajectory completed.")
 
 ......................................................................................................
+C. ArUco Landing
+..................
+ArUco markers are used so that the drone can accurately detect its position and orientation relative to
+the landing area, allowing for precise and controlled landing. 
+ArUco Tags are  markers used for the purpose of camera pose estimation. The framework developed uses ArUco markers for detection and landing. It contains an array of binary sqaures (black or white) and encodes a number. Each marker can be uniquely identified using this encoded number. They are most commonly used for augmented reality and related applications.
+steps include:
+pip install opencv-contrib-python --->to install OpenCV 
+creating a workspace:
+mkdir -p aruco_ws/src
+cd aruco_ws
+catkin init
+cd src/
+catkin_make
+source devel/setup.bash
+Then implementing aruco tags and world and importing a premodelling drone urdf into the world.
+to launch the simulation:
+roslaunch mav_precision_landing basic.launch
+
+
